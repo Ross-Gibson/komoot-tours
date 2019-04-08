@@ -16,8 +16,23 @@
 		9E18D283225B3DAE0032B36F /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D282225B3DAE0032B36F /* Tour.swift */; };
 		9E18D286225B3E180032B36F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D285225B3E180032B36F /* ErrorHandler.swift */; };
 		9E18D28A225B54A40032B36F /* KomootAPIServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D289225B54A40032B36F /* KomootAPIServiceParser.swift */; };
+		9E18D295225B724C0032B36F /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D294225B724C0032B36F /* ApplicationCoordinator.swift */; };
+		9E18D297225B726D0032B36F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D296225B726D0032B36F /* BaseCoordinator.swift */; };
+		9E18D299225B728A0032B36F /* ToursCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D298225B728A0032B36F /* ToursCoordinator.swift */; };
+		9E18D29B225B72D50032B36F /* ViewController+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D29A225B72D50032B36F /* ViewController+Coordinator.swift */; };
+		9E18D29D225B72F30032B36F /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D29C225B72F30032B36F /* CoordinatorFactory.swift */; };
+		9E18D29F225B73170032B36F /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D29E225B73170032B36F /* ViewControllerFactory.swift */; };
+		9E18D2A1225B733E0032B36F /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2A0225B733E0032B36F /* BaseViewControllerProtocol.swift */; };
+		9E18D2A3225B734E0032B36F /* ChildCoordinatorFinishOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2A2225B734E0032B36F /* ChildCoordinatorFinishOutput.swift */; };
+		9E18D2A5225B735D0032B36F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2A4225B735D0032B36F /* Coordinator.swift */; };
+		9E18D2A7225B736D0032B36F /* CoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2A6225B736D0032B36F /* CoordinatorFactoryProtocol.swift */; };
+		9E18D2A9225B73930032B36F /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2A8225B73930032B36F /* Presentable.swift */; };
+		9E18D2AB225B73BE0032B36F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2AA225B73BE0032B36F /* Router.swift */; };
+		9E18D2AD225B73E40032B36F /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2AC225B73E40032B36F /* FadeAnimator.swift */; };
+		9E18D2B0225B744E0032B36F /* Tours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E18D2AF225B744E0032B36F /* Tours.storyboard */; };
+		9E18D2B2225B74860032B36F /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2B1225B74860032B36F /* ToursViewController.swift */; };
+		9E18D2B5225B750A0032B36F /* Storyboard+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2B4225B750A0032B36F /* Storyboard+Init.swift */; };
 		9EE3C06A225B3B1B00246F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3C069225B3B1B00246F31 /* AppDelegate.swift */; };
-		9EE3C06C225B3B1B00246F31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3C06B225B3B1B00246F31 /* ViewController.swift */; };
 		9EE3C06F225B3B1B00246F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3C06D225B3B1B00246F31 /* Main.storyboard */; };
 		9EE3C071225B3B1D00246F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3C070225B3B1D00246F31 /* Assets.xcassets */; };
 		9EE3C074225B3B1D00246F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3C072225B3B1D00246F31 /* LaunchScreen.storyboard */; };
@@ -33,9 +48,24 @@
 		9E18D282225B3DAE0032B36F /* Tour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 		9E18D285225B3E180032B36F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		9E18D289225B54A40032B36F /* KomootAPIServiceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomootAPIServiceParser.swift; sourceTree = "<group>"; };
+		9E18D294225B724C0032B36F /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		9E18D296225B726D0032B36F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		9E18D298225B728A0032B36F /* ToursCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursCoordinator.swift; sourceTree = "<group>"; };
+		9E18D29A225B72D50032B36F /* ViewController+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Coordinator.swift"; sourceTree = "<group>"; };
+		9E18D29C225B72F30032B36F /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		9E18D29E225B73170032B36F /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		9E18D2A0225B733E0032B36F /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
+		9E18D2A2225B734E0032B36F /* ChildCoordinatorFinishOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinatorFinishOutput.swift; sourceTree = "<group>"; };
+		9E18D2A4225B735D0032B36F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9E18D2A6225B736D0032B36F /* CoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
+		9E18D2A8225B73930032B36F /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		9E18D2AA225B73BE0032B36F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9E18D2AC225B73E40032B36F /* FadeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAnimator.swift; sourceTree = "<group>"; };
+		9E18D2AF225B744E0032B36F /* Tours.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tours.storyboard; sourceTree = "<group>"; };
+		9E18D2B1225B74860032B36F /* ToursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
+		9E18D2B4225B750A0032B36F /* Storyboard+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Init.swift"; sourceTree = "<group>"; };
 		9EE3C066225B3B1B00246F31 /* tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3C069225B3B1B00246F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9EE3C06B225B3B1B00246F31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9EE3C06E225B3B1B00246F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EE3C070225B3B1D00246F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EE3C073225B3B1D00246F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,6 +156,107 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		9E18D28D225B71F30032B36F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D28E225B72090032B36F /* Coordinators */,
+				9E18D28F225B72150032B36F /* Extensions */,
+				9E18D290225B721F0032B36F /* Factory */,
+				9E18D291225B72250032B36F /* Protocols */,
+				9E18D292225B722D0032B36F /* Router */,
+				9E18D293225B72330032B36F /* Transitions */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9E18D28E225B72090032B36F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D294225B724C0032B36F /* ApplicationCoordinator.swift */,
+				9E18D296225B726D0032B36F /* BaseCoordinator.swift */,
+				9E18D298225B728A0032B36F /* ToursCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9E18D28F225B72150032B36F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D29A225B72D50032B36F /* ViewController+Coordinator.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9E18D290225B721F0032B36F /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D29C225B72F30032B36F /* CoordinatorFactory.swift */,
+				9E18D29E225B73170032B36F /* ViewControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		9E18D291225B72250032B36F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D2A0225B733E0032B36F /* BaseViewControllerProtocol.swift */,
+				9E18D2A2225B734E0032B36F /* ChildCoordinatorFinishOutput.swift */,
+				9E18D2A4225B735D0032B36F /* Coordinator.swift */,
+				9E18D2A6225B736D0032B36F /* CoordinatorFactoryProtocol.swift */,
+				9E18D2A8225B73930032B36F /* Presentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9E18D292225B722D0032B36F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D2AA225B73BE0032B36F /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9E18D293225B72330032B36F /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D2AC225B73E40032B36F /* FadeAnimator.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+		9E18D2AE225B742F0032B36F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3C06D225B3B1B00246F31 /* Main.storyboard */,
+				9E18D2AF225B744E0032B36F /* Tours.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9E18D2B3225B74C40032B36F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D2B4225B750A0032B36F /* Storyboard+Init.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9E18D2B6225B778E0032B36F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D2B7225B77A70032B36F /* Tours */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9E18D2B7225B77A70032B36F /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D2B1225B74860032B36F /* ToursViewController.swift */,
+			);
+			path = Tours;
+			sourceTree = "<group>";
+		};
 		9EE3C05D225B3B1B00246F31 = {
 			isa = PBXGroup;
 			children = (
@@ -148,11 +279,13 @@
 			isa = PBXGroup;
 			children = (
 				9EE3C069225B3B1B00246F31 /* AppDelegate.swift */,
-				9EE3C06B225B3B1B00246F31 /* ViewController.swift */,
+				9E18D28D225B71F30032B36F /* Coordinator */,
+				9E18D2B3225B74C40032B36F /* Extensions */,
 				9E18D281225B3D9B0032B36F /* Models */,
 				9E18D28B225B54E30032B36F /* Services */,
 				9E18D284225B3E080032B36F /* Types */,
-				9EE3C06D225B3B1B00246F31 /* Main.storyboard */,
+				9E18D2B6225B778E0032B36F /* Scenes */,
+				9E18D2AE225B742F0032B36F /* Storyboards */,
 				9EE3C070225B3B1D00246F31 /* Assets.xcassets */,
 				9EE3C072225B3B1D00246F31 /* LaunchScreen.storyboard */,
 				9EE3C075225B3B1D00246F31 /* Info.plist */,
@@ -220,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E18D2B0225B744E0032B36F /* Tours.storyboard in Resources */,
 				9EE3C074225B3B1D00246F31 /* LaunchScreen.storyboard in Resources */,
 				9EE3C071225B3B1D00246F31 /* Assets.xcassets in Resources */,
 				9EE3C06F225B3B1B00246F31 /* Main.storyboard in Resources */,
@@ -280,16 +414,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E18D2B2225B74860032B36F /* ToursViewController.swift in Sources */,
+				9E18D2AB225B73BE0032B36F /* Router.swift in Sources */,
+				9E18D299225B728A0032B36F /* ToursCoordinator.swift in Sources */,
 				9E18D27E225B3D200032B36F /* KomootAPIService.swift in Sources */,
 				9E18D27C225B3D0D0032B36F /* KomootAPIClient.swift in Sources */,
+				9E18D2AD225B73E40032B36F /* FadeAnimator.swift in Sources */,
+				9E18D2A3225B734E0032B36F /* ChildCoordinatorFinishOutput.swift in Sources */,
+				9E18D2A1225B733E0032B36F /* BaseViewControllerProtocol.swift in Sources */,
 				9E18D28A225B54A40032B36F /* KomootAPIServiceParser.swift in Sources */,
-				9EE3C06C225B3B1B00246F31 /* ViewController.swift in Sources */,
+				9E18D2A5225B735D0032B36F /* Coordinator.swift in Sources */,
 				9EE3C06A225B3B1B00246F31 /* AppDelegate.swift in Sources */,
 				9E18D276225B3CCF0032B36F /* APIService.swift in Sources */,
 				9E18D283225B3DAE0032B36F /* Tour.swift in Sources */,
+				9E18D297225B726D0032B36F /* BaseCoordinator.swift in Sources */,
+				9E18D29D225B72F30032B36F /* CoordinatorFactory.swift in Sources */,
 				9E18D286225B3E180032B36F /* ErrorHandler.swift in Sources */,
+				9E18D2B5225B750A0032B36F /* Storyboard+Init.swift in Sources */,
 				9E18D278225B3CDE0032B36F /* APIServiceParser.swift in Sources */,
 				9E18D274225B3CC00032B36F /* APIClient.swift in Sources */,
+				9E18D29F225B73170032B36F /* ViewControllerFactory.swift in Sources */,
+				9E18D29B225B72D50032B36F /* ViewController+Coordinator.swift in Sources */,
+				9E18D2A7225B736D0032B36F /* CoordinatorFactoryProtocol.swift in Sources */,
+				9E18D295225B724C0032B36F /* ApplicationCoordinator.swift in Sources */,
+				9E18D2A9225B73930032B36F /* Presentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

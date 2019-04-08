@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ToursViewController.swift
 //  tours
 //
 //  Created by Ross Gibson on 08/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ToursViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
