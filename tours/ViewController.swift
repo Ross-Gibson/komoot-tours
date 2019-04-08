@@ -12,9 +12,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let service = KomootAPIService(authToken: "")
+        let parser = KomootAPIServiceParser()
+        let client = KomootAPIClient(service: service, parser: parser)
+        let user = ""
+
+        client.getTours(for: user, completion: { tours in
+            print(tours)
+        }, failure: { error in
+            print(error)
+        })
     }
 
-
 }
-

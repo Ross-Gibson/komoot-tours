@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		46C062EA7807296354D41904 /* Pods_tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3C1A18D05AC91AFB29E43 /* Pods_tours.framework */; };
+		9E18D274225B3CC00032B36F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D273225B3CC00032B36F /* APIClient.swift */; };
+		9E18D276225B3CCF0032B36F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D275225B3CCF0032B36F /* APIService.swift */; };
+		9E18D278225B3CDE0032B36F /* APIServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D277225B3CDE0032B36F /* APIServiceParser.swift */; };
+		9E18D27C225B3D0D0032B36F /* KomootAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D27B225B3D0D0032B36F /* KomootAPIClient.swift */; };
+		9E18D27E225B3D200032B36F /* KomootAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D27D225B3D200032B36F /* KomootAPIService.swift */; };
+		9E18D283225B3DAE0032B36F /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D282225B3DAE0032B36F /* Tour.swift */; };
+		9E18D286225B3E180032B36F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D285225B3E180032B36F /* ErrorHandler.swift */; };
+		9E18D28A225B54A40032B36F /* KomootAPIServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D289225B54A40032B36F /* KomootAPIServiceParser.swift */; };
 		9EE3C06A225B3B1B00246F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3C069225B3B1B00246F31 /* AppDelegate.swift */; };
 		9EE3C06C225B3B1B00246F31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3C06B225B3B1B00246F31 /* ViewController.swift */; };
 		9EE3C06F225B3B1B00246F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3C06D225B3B1B00246F31 /* Main.storyboard */; };
@@ -17,6 +25,14 @@
 
 /* Begin PBXFileReference section */
 		899A0FF3783581E9FDB6AC4C /* Pods-tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tours.release.xcconfig"; path = "Target Support Files/Pods-tours/Pods-tours.release.xcconfig"; sourceTree = "<group>"; };
+		9E18D273225B3CC00032B36F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9E18D275225B3CCF0032B36F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9E18D277225B3CDE0032B36F /* APIServiceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceParser.swift; sourceTree = "<group>"; };
+		9E18D27B225B3D0D0032B36F /* KomootAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomootAPIClient.swift; sourceTree = "<group>"; };
+		9E18D27D225B3D200032B36F /* KomootAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomootAPIService.swift; sourceTree = "<group>"; };
+		9E18D282225B3DAE0032B36F /* Tour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
+		9E18D285225B3E180032B36F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		9E18D289225B54A40032B36F /* KomootAPIServiceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KomootAPIServiceParser.swift; sourceTree = "<group>"; };
 		9EE3C066225B3B1B00246F31 /* tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3C069225B3B1B00246F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EE3C06B225B3B1B00246F31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +62,6 @@
 				DCDC447641039D15B0CA69E1 /* Pods-tours.debug.xcconfig */,
 				899A0FF3783581E9FDB6AC4C /* Pods-tours.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -56,6 +71,59 @@
 				AFD3C1A18D05AC91AFB29E43 /* Pods_tours.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E18D279225B3CE50032B36F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D273225B3CC00032B36F /* APIClient.swift */,
+				9E18D275225B3CCF0032B36F /* APIService.swift */,
+				9E18D277225B3CDE0032B36F /* APIServiceParser.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9E18D27A225B3CF70032B36F /* Komoot */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D27B225B3D0D0032B36F /* KomootAPIClient.swift */,
+				9E18D27D225B3D200032B36F /* KomootAPIService.swift */,
+				9E18D289225B54A40032B36F /* KomootAPIServiceParser.swift */,
+			);
+			path = Komoot;
+			sourceTree = "<group>";
+		};
+		9E18D281225B3D9B0032B36F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D282225B3DAE0032B36F /* Tour.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9E18D284225B3E080032B36F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D285225B3E180032B36F /* ErrorHandler.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		9E18D28B225B54E30032B36F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D28C225B54EA0032B36F /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9E18D28C225B54EA0032B36F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D27A225B3CF70032B36F /* Komoot */,
+				9E18D279225B3CE50032B36F /* Protocols */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		9EE3C05D225B3B1B00246F31 = {
@@ -81,6 +149,9 @@
 			children = (
 				9EE3C069225B3B1B00246F31 /* AppDelegate.swift */,
 				9EE3C06B225B3B1B00246F31 /* ViewController.swift */,
+				9E18D281225B3D9B0032B36F /* Models */,
+				9E18D28B225B54E30032B36F /* Services */,
+				9E18D284225B3E080032B36F /* Types */,
 				9EE3C06D225B3B1B00246F31 /* Main.storyboard */,
 				9EE3C070225B3B1D00246F31 /* Assets.xcassets */,
 				9EE3C072225B3B1D00246F31 /* LaunchScreen.storyboard */,
@@ -186,8 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E18D27E225B3D200032B36F /* KomootAPIService.swift in Sources */,
+				9E18D27C225B3D0D0032B36F /* KomootAPIClient.swift in Sources */,
+				9E18D28A225B54A40032B36F /* KomootAPIServiceParser.swift in Sources */,
 				9EE3C06C225B3B1B00246F31 /* ViewController.swift in Sources */,
 				9EE3C06A225B3B1B00246F31 /* AppDelegate.swift in Sources */,
+				9E18D276225B3CCF0032B36F /* APIService.swift in Sources */,
+				9E18D283225B3DAE0032B36F /* Tour.swift in Sources */,
+				9E18D286225B3E180032B36F /* ErrorHandler.swift in Sources */,
+				9E18D278225B3CDE0032B36F /* APIServiceParser.swift in Sources */,
+				9E18D274225B3CC00032B36F /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
