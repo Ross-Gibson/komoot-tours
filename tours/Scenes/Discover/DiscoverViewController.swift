@@ -42,9 +42,8 @@ extension DiscoverViewController: UICollectionViewDataSource {
         // TODO: Pull-out the identifier to a strings file
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DiscoverCollectionViewCell", for: indexPath) as! DiscoverCollectionViewCell
 
-
         if let tour = viewModel?.tourForItemAt(index: indexPath.row) {
-            cell.nameLabel.text = tour.name
+            cell.configure(with: tour)
         }
 
         return cell
@@ -56,21 +55,11 @@ extension DiscoverViewController: UICollectionViewDataSource {
 extension DiscoverViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        let columns: Int = {
-            var count = 2
-            if traitCollection.horizontalSizeClass == .regular {
-                count = count + 1
-            }
-            if collectionView.bounds.width > collectionView.bounds.height {
-                count = count + 1
-            }
-            return count
-        }()
+        let columns = 1
         let totalSpace = flowLayout.sectionInset.left
             + flowLayout.sectionInset.right
-            + (flowLayout.minimumInteritemSpacing * CGFloat(columns - 1))
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(columns))
-        return CGSize(width: size, height: size)
+        return CGSize(width: size, height: 100)
     }
 }
 

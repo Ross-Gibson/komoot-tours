@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
+
 protocol DetailViewControllerProtocol: class {
     var onBack: (() -> Void)? { get set }
 }
@@ -16,7 +19,12 @@ final class DetailViewController: UIViewController, DetailViewControllerProtocol
     var onBack: (() -> Void)?
     var viewModel: DetailViewModelProtocol?
 
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var elevationUpLabel: UILabel!
+    @IBOutlet weak var elevationDownLabel: UILabel!
 
     lazy var backButton: UIBarButtonItem = {
         let image = UIImage(named: "arrow-left")?.withRenderingMode(.alwaysOriginal)
@@ -29,9 +37,29 @@ final class DetailViewController: UIViewController, DetailViewControllerProtocol
         super.viewDidLoad()
 
         nameLabel.text = viewModel?.name
+        durationLabel.text = viewModel?.duration
+        distanceLabel.text = viewModel?.distance
+        elevationUpLabel.text = viewModel?.elevationUp
+        elevationDownLabel.text = viewModel?.elevationDown
 
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = backButton
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        focusMapOn(location: viewModel?.startPoint)
+    }
+
+    func focusMapOn(location: CLLocation?, animated: Bool = true) {
+        guard let location = location else {
+            return
+        }
+
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        mapView.setRegion(region, animated: animated)
     }
 
     // MARK: - Actions

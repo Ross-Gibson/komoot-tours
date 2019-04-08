@@ -11,11 +11,17 @@ import UIKit
 class DiscoverCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
 
     override func prepareForReuse() {
         super.prepareForReuse()
 
         nameLabel.text = nil
+    }
+
+    func configure(with tour: Tour) {
+        nameLabel.text = tour.name
+        distanceLabel.text = String(tour.distance)
     }
 
 }
