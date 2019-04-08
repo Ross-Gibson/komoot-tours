@@ -7,21 +7,22 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 final class KomootAPIServiceParser: APIServiceParser {
     func parse(responseData: Data, completion: @escaping ([Tour]) -> Void, failure: @escaping ErrorHandler) {
         do {
-            guard let json = try JSONSerialization.jsonObject(with: responseData, options: [])
-                as? [String: Any] else {
-                    failure(APIServiceParserError.invalidJSON)
-                    return
-            }
+            let json = try JSON(data: responseData)
 
-            // TODO: Parse JSON
-            print(json)
-            let tours: [Tour] = []
-            completion(tours)
-        } catch  {
+            if let toursData = json["_embedded"]["tours"].array {
+                let tours = toursData.compactMap {
+                    Tour(id: $0["id"].intValue, name: $0["name"].stringValue)
+                }
+                completion(tours)
+            } else {
+                failure(APIServiceParserError.invalidJSON)
+            }
+        } catch {
             failure(APIServiceParserError.invalidJSON)
         }
     }

@@ -6,5 +6,5 @@ target 'tours' do
   use_frameworks!
 
   # Pods for tours
-
+  pod 'SwiftyJSON', '~> 4.0'
 end
