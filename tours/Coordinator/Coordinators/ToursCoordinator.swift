@@ -25,14 +25,25 @@ final class ToursCoordinator: BaseCoordinator {
     // MARK: - Coordinator
 
     override func start() {
-        self.showToursViewController()
+        self.showDiscoverViewController()
     }
 
     // MARK: - Private methods
 
-    private func showToursViewController() {
-        let toursVC = self.viewControllerFactory.instantiateToursViewController()
-        self.router.setRootModule(toursVC)
+    private func showDiscoverViewController() {
+        let discoverVC = self.viewControllerFactory.instantiateDiscoverViewController()
+        discoverVC.onShowDetail = { [unowned self] gif in
+            self.showDetailViewController(for: gif)
+        }
+        self.router.setRootModule(discoverVC)
+    }
+
+    private func showDetailViewController(for tour: Tour) {
+        let detailVC = self.viewControllerFactory.instantiateDetailViewController(with: tour)
+        detailVC.onBack = { [unowned self] in
+            self.router.popModule(transition: FadeAnimator(animationDuration: 0.5, isPresenting: true))
+        }
+        self.router.push(detailVC, transition: FadeAnimator(animationDuration: 0.5, isPresenting: false))
     }
 
 }

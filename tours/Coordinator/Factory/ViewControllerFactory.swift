@@ -10,10 +10,24 @@ import UIKit
 
 final class ViewControllerFactory {
 
-    func instantiateToursViewController() -> ToursViewController {
+    func instantiateDiscoverViewController() -> DiscoverViewController {
         // TODO: Pull-out the identifier to a strings file
-        let toursVC = UIStoryboard.tours.instantiateViewController(withIdentifier: "ToursViewController") as! ToursViewController
-        return toursVC
+        let discoverVC = UIStoryboard.tours.instantiateViewController(withIdentifier: "DiscoverViewController") as! DiscoverViewController
+
+        let service = KomootAPIService(authToken: "NDcxNzk1NzAzNDQxOlpsTnZqY1BoX2NqMGE4NzZtNUc4eldGQWwxcmk5LUZMY3ZwLURhWU1sYk1tNXRuOXZIR1M4QktYdVFJMm9nUUc=")
+        let parser = KomootAPIServiceParser()
+        let client = KomootAPIClient(service: service, parser: parser)
+
+        discoverVC.viewModel = DiscoverViewModel(client: client)
+        
+        return discoverVC
+    }
+
+    func instantiateDetailViewController(with tour: Tour) -> DetailViewController {
+        // TODO: Pull-out the identifier to a strings file
+        let detailVC = UIStoryboard.tours.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.viewModel = DetailViewModel(with: tour)
+        return detailVC
     }
 
 }

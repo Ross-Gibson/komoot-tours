@@ -30,8 +30,13 @@
 		9E18D2AB225B73BE0032B36F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2AA225B73BE0032B36F /* Router.swift */; };
 		9E18D2AD225B73E40032B36F /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2AC225B73E40032B36F /* FadeAnimator.swift */; };
 		9E18D2B0225B744E0032B36F /* Tours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E18D2AF225B744E0032B36F /* Tours.storyboard */; };
-		9E18D2B2225B74860032B36F /* ToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2B1225B74860032B36F /* ToursViewController.swift */; };
+		9E18D2B2225B74860032B36F /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2B1225B74860032B36F /* DiscoverViewController.swift */; };
 		9E18D2B5225B750A0032B36F /* Storyboard+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2B4225B750A0032B36F /* Storyboard+Init.swift */; };
+		9E18D2B9225B77E30032B36F /* DiscoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2B8225B77E30032B36F /* DiscoverModel.swift */; };
+		9E18D2BB225B77F10032B36F /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2BA225B77F10032B36F /* DiscoverViewModel.swift */; };
+		9E18D2BD225B87A00032B36F /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2BC225B87A00032B36F /* DiscoverCollectionViewCell.swift */; };
+		9E18D2C0225B892F0032B36F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2BF225B892F0032B36F /* DetailViewModel.swift */; };
+		9E18D2C2225B896D0032B36F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18D2C1225B896D0032B36F /* DetailViewController.swift */; };
 		9EE3C06A225B3B1B00246F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3C069225B3B1B00246F31 /* AppDelegate.swift */; };
 		9EE3C06F225B3B1B00246F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3C06D225B3B1B00246F31 /* Main.storyboard */; };
 		9EE3C071225B3B1D00246F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3C070225B3B1D00246F31 /* Assets.xcassets */; };
@@ -62,8 +67,13 @@
 		9E18D2AA225B73BE0032B36F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9E18D2AC225B73E40032B36F /* FadeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAnimator.swift; sourceTree = "<group>"; };
 		9E18D2AF225B744E0032B36F /* Tours.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tours.storyboard; sourceTree = "<group>"; };
-		9E18D2B1225B74860032B36F /* ToursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursViewController.swift; sourceTree = "<group>"; };
+		9E18D2B1225B74860032B36F /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		9E18D2B4225B750A0032B36F /* Storyboard+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Init.swift"; sourceTree = "<group>"; };
+		9E18D2B8225B77E30032B36F /* DiscoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModel.swift; sourceTree = "<group>"; };
+		9E18D2BA225B77F10032B36F /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
+		9E18D2BC225B87A00032B36F /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E18D2BF225B892F0032B36F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		9E18D2C1225B896D0032B36F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9EE3C066225B3B1B00246F31 /* tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3C069225B3B1B00246F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EE3C06E225B3B1B00246F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -244,17 +254,30 @@
 		9E18D2B6225B778E0032B36F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				9E18D2B7225B77A70032B36F /* Tours */,
+				9E18D2BE225B89150032B36F /* Detail */,
+				9E18D2B7225B77A70032B36F /* Discover */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		9E18D2B7225B77A70032B36F /* Tours */ = {
+		9E18D2B7225B77A70032B36F /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				9E18D2B1225B74860032B36F /* ToursViewController.swift */,
+				9E18D2B8225B77E30032B36F /* DiscoverModel.swift */,
+				9E18D2BA225B77F10032B36F /* DiscoverViewModel.swift */,
+				9E18D2B1225B74860032B36F /* DiscoverViewController.swift */,
+				9E18D2BC225B87A00032B36F /* DiscoverCollectionViewCell.swift */,
 			);
-			path = Tours;
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		9E18D2BE225B89150032B36F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9E18D2BF225B892F0032B36F /* DetailViewModel.swift */,
+				9E18D2C1225B896D0032B36F /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		9EE3C05D225B3B1B00246F31 = {
@@ -414,26 +437,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E18D2B2225B74860032B36F /* ToursViewController.swift in Sources */,
+				9E18D2B2225B74860032B36F /* DiscoverViewController.swift in Sources */,
 				9E18D2AB225B73BE0032B36F /* Router.swift in Sources */,
 				9E18D299225B728A0032B36F /* ToursCoordinator.swift in Sources */,
 				9E18D27E225B3D200032B36F /* KomootAPIService.swift in Sources */,
 				9E18D27C225B3D0D0032B36F /* KomootAPIClient.swift in Sources */,
 				9E18D2AD225B73E40032B36F /* FadeAnimator.swift in Sources */,
 				9E18D2A3225B734E0032B36F /* ChildCoordinatorFinishOutput.swift in Sources */,
+				9E18D2B9225B77E30032B36F /* DiscoverModel.swift in Sources */,
 				9E18D2A1225B733E0032B36F /* BaseViewControllerProtocol.swift in Sources */,
+				9E18D2C2225B896D0032B36F /* DetailViewController.swift in Sources */,
 				9E18D28A225B54A40032B36F /* KomootAPIServiceParser.swift in Sources */,
 				9E18D2A5225B735D0032B36F /* Coordinator.swift in Sources */,
 				9EE3C06A225B3B1B00246F31 /* AppDelegate.swift in Sources */,
+				9E18D2BD225B87A00032B36F /* DiscoverCollectionViewCell.swift in Sources */,
 				9E18D276225B3CCF0032B36F /* APIService.swift in Sources */,
 				9E18D283225B3DAE0032B36F /* Tour.swift in Sources */,
 				9E18D297225B726D0032B36F /* BaseCoordinator.swift in Sources */,
 				9E18D29D225B72F30032B36F /* CoordinatorFactory.swift in Sources */,
+				9E18D2BB225B77F10032B36F /* DiscoverViewModel.swift in Sources */,
 				9E18D286225B3E180032B36F /* ErrorHandler.swift in Sources */,
 				9E18D2B5225B750A0032B36F /* Storyboard+Init.swift in Sources */,
 				9E18D278225B3CDE0032B36F /* APIServiceParser.swift in Sources */,
 				9E18D274225B3CC00032B36F /* APIClient.swift in Sources */,
 				9E18D29F225B73170032B36F /* ViewControllerFactory.swift in Sources */,
+				9E18D2C0225B892F0032B36F /* DetailViewModel.swift in Sources */,
 				9E18D29B225B72D50032B36F /* ViewController+Coordinator.swift in Sources */,
 				9E18D2A7225B736D0032B36F /* CoordinatorFactoryProtocol.swift in Sources */,
 				9E18D295225B724C0032B36F /* ApplicationCoordinator.swift in Sources */,
