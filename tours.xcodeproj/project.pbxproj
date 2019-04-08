@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46C062EA7807296354D41904 /* Pods_tours.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD3C1A18D05AC91AFB29E43 /* Pods_tours.framework */; };
 		9EE3C06A225B3B1B00246F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3C069225B3B1B00246F31 /* AppDelegate.swift */; };
 		9EE3C06C225B3B1B00246F31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3C06B225B3B1B00246F31 /* ViewController.swift */; };
 		9EE3C06F225B3B1B00246F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3C06D225B3B1B00246F31 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		899A0FF3783581E9FDB6AC4C /* Pods-tours.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tours.release.xcconfig"; path = "Target Support Files/Pods-tours/Pods-tours.release.xcconfig"; sourceTree = "<group>"; };
 		9EE3C066225B3B1B00246F31 /* tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3C069225B3B1B00246F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EE3C06B225B3B1B00246F31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		9EE3C070225B3B1D00246F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EE3C073225B3B1D00246F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EE3C075225B3B1D00246F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD3C1A18D05AC91AFB29E43 /* Pods_tours.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tours.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCDC447641039D15B0CA69E1 /* Pods-tours.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tours.debug.xcconfig"; path = "Target Support Files/Pods-tours/Pods-tours.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C062EA7807296354D41904 /* Pods_tours.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02CF2E3569B7130AA7B98728 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCDC447641039D15B0CA69E1 /* Pods-tours.debug.xcconfig */,
+				899A0FF3783581E9FDB6AC4C /* Pods-tours.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		069E69DC18D38C791124F27A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFD3C1A18D05AC91AFB29E43 /* Pods_tours.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9EE3C05D225B3B1B00246F31 = {
 			isa = PBXGroup;
 			children = (
 				9EE3C068225B3B1B00246F31 /* tours */,
 				9EE3C067225B3B1B00246F31 /* Products */,
+				02CF2E3569B7130AA7B98728 /* Pods */,
+				069E69DC18D38C791124F27A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EE3C078225B3B1D00246F31 /* Build configuration list for PBXNativeTarget "tours" */;
 			buildPhases = (
+				A2A1DEA19FCAC1DE4F39F6E0 /* [CP] Check Pods Manifest.lock */,
 				9EE3C062225B3B1B00246F31 /* Sources */,
 				9EE3C063225B3B1B00246F31 /* Frameworks */,
 				9EE3C064225B3B1B00246F31 /* Resources */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2A1DEA19FCAC1DE4F39F6E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tours-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9EE3C062225B3B1B00246F31 /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		9EE3C079225B3B1D00246F31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCDC447641039D15B0CA69E1 /* Pods-tours.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +349,7 @@
 		};
 		9EE3C07A225B3B1D00246F31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 899A0FF3783581E9FDB6AC4C /* Pods-tours.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
