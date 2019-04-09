@@ -1,6 +1,8 @@
 # komoot-tours
 An application to explore the Komoot API.
 
+![](https://github.com/Ross-Gibson/komoot-tours/blob/master/tours.gif)
+
 
 
 # Build dependencies
@@ -23,7 +25,7 @@ Prior to building please download and install the below build dependencies:
 7. Select one of the requests, and copy the Auth Token from the `Authorization` param. You only need the bit starting after "Basic".
 8. Look at the GET request. The part after `/v007/users/` is your user ID
 
-![](charles.png)
+![](https://github.com/Ross-Gibson/komoot-tours/blob/master/charles.png)
 
 
 
