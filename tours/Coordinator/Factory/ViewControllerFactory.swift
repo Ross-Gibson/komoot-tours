@@ -14,7 +14,7 @@ final class ViewControllerFactory {
         // TODO: Pull-out the identifier to a strings file
         let discoverVC = UIStoryboard.tours.instantiateViewController(withIdentifier: "DiscoverViewController") as! DiscoverViewController
 
-        let service = KomootAPIService(authToken: "NDcxNzk1NzAzNDQxOlpsTnZqY1BoX2NqMGE4NzZtNUc4eldGQWwxcmk5LUZMY3ZwLURhWU1sYk1tNXRuOXZIR1M4QktYdVFJMm9nUUc=")
+        let service = KomootAPIService(authToken: "")
         let parser = KomootAPIServiceParser()
         let client = KomootAPIClient(service: service, parser: parser)
 

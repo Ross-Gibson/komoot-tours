@@ -32,8 +32,8 @@ final class ToursCoordinator: BaseCoordinator {
 
     private func showDiscoverViewController() {
         let discoverVC = self.viewControllerFactory.instantiateDiscoverViewController()
-        discoverVC.onShowDetail = { [unowned self] gif in
-            self.showDetailViewController(for: gif)
+        discoverVC.onShowDetail = { [unowned self] tour in
+            self.showDetailViewController(for: tour)
         }
         self.router.setRootModule(discoverVC)
     }

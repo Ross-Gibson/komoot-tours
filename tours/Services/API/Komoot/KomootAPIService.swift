@@ -11,6 +11,7 @@ import Foundation
 final class KomootAPIService: APIService {
 
     private let authToken: String
+    // TODO: The base url could be injected.
     private let baseURL = "http://api.komoot.de/"
     private let apiVersion = "v007"
 

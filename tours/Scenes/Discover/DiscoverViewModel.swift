@@ -53,7 +53,7 @@ final class DiscoverViewModel: NSObject, DiscoverViewModelProtocol {
 
         isFetchInProgress = true
 
-        let user = "471795703441"
+        let user = ""
 
         client.getTours(for: user, completion: { tours in
             DispatchQueue.main.async {
