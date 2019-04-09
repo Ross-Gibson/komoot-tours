@@ -25,6 +25,8 @@ Prior to building please download and install the below build dependencies:
 6. Open the file `DiscoverViewModel.swift` and at line 56 add your User ID
 7. Build and run the app from Xcode using the iPhone Simulator
 
+![](charles.png)
+
 
 
 # How to find your Auth Token an User ID
