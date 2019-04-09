@@ -36,8 +36,8 @@ Prior to building please download and install the below build dependencies:
 `pod install`
 4. Open the Workspace in Xcode
 `open tours.xcworkspace`
-5. Open the file `ViewControllerFactory.swift` and at line 17 add your Auth Token
-6. Open the file `DiscoverViewModel.swift` and at line 56 add your User ID
+5. Open the file `ViewControllerFactory.swift` and at [line 17](https://github.com/Ross-Gibson/komoot-tours/blob/master/tours/Coordinator/Factory/ViewControllerFactory.swift#L17) add your Auth Token
+6. Open the file `DiscoverViewModel.swift` and at [line 56](https://github.com/Ross-Gibson/komoot-tours/blob/master/tours/Scenes/Discover/DiscoverViewModel.swift#L56) add your User ID
 7. Build and run the app from Xcode using the iPhone Simulator
 
 
