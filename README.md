@@ -14,7 +14,7 @@ Prior to building please download and install the below build dependencies:
 
 
 
-# How to find your Auth Token an User ID
+# How to find your Auth Token and User ID
 
 1. Download the [Komoot app](https://www.komoot.com) from the App Store
 2. Download and configure [Charles Proxy](https://www.charlesproxy.com) on your Mac
