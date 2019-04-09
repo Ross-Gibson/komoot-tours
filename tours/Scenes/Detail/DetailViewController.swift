@@ -27,7 +27,7 @@ final class DetailViewController: UIViewController, DetailViewControllerProtocol
     @IBOutlet weak var elevationDownLabel: UILabel!
 
     lazy var backButton: UIBarButtonItem = {
-        let image = UIImage(named: "arrow-left")?.withRenderingMode(.alwaysOriginal)
+        let image = UIImage(named: "chevron-left")?.withRenderingMode(.alwaysOriginal)
         return UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(back))
     }()
 
