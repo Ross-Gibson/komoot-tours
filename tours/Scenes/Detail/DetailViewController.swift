@@ -49,14 +49,20 @@ final class DetailViewController: UIViewController, DetailViewControllerProtocol
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        focusMapOn(location: viewModel?.startPoint)
-    }
-
-    func focusMapOn(location: CLLocation?, animated: Bool = true) {
-        guard let location = location else {
+        guard let location = viewModel?.startPoint else {
             return
         }
 
+        DispatchQueue.main.async {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            self.mapView.addAnnotation(annotation)
+            self.focusMapOn(location)
+        }
+
+    }
+
+    func focusMapOn(_ location: CLLocation, animated: Bool = true) {
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         mapView.setRegion(region, animated: animated)
